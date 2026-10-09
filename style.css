@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #263b3b;
+    line-height: 1.6;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 18px 8%;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #176b68;
+}
+
+header h1 span {
+    color: #e59b50;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    margin-top: 12px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+nav a:hover,
+nav a.selecionado {
+    color: #176b68;
+    border-bottom: 2px solid #e59b50;
+}
+
+#menuBtn {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.banner {
+    min-height: 480px;
+    background:
+        linear-gradient(rgba(16, 72, 72, .62), rgba(16, 72, 72, .40)),
+        url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+}
+
+.banner > div {
+    max-width: 620px;
+}
+
+.banner h2 {
+    font-size: 58px;
+    margin: 8px 0;
+}
+
+.banner p:not(.pequeno) {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.pequeno {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #e59b50;
+}
+
+.botao {
+    display: inline-block;
+    background: #e59b50;
+    color: #173b3a;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.botao:hover {
+    background: #f0b06a;
+}
+
+.conteudo {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.conteudo > h2,
+.titulo-pagina h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #174d4c;
+}
+
+.conteudo > p {
+    max-width: 750px;
+    color: #666;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.cards article {
+    background: white;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+.icone {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.cards h3 {
+    color: #176b68;
+    margin-bottom: 8px;
+}
+
+.cards p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.cards a {
+    color: #176b68;
+    font-weight: bold;
+}
+
+.frase {
+    background: #eaf2ef;
+    padding: 45px 20px;
+    text-align: center;
+    color: #176b68;
+}
+
+.frase p {
+    font-size: 22px;
+    font-style: italic;
+}
+
+.titulo-pagina {
+    padding: 70px 8%;
+    background: #eaf2ef;
+}
+
+.titulo-pagina p:last-child {
+    color: #666;
+    max-width: 650px;
+}
+
+.lista-lugares {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.lugar {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.lugar img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.lugar div {
+    padding: 30px;
+}
+
+.lugar h3 {
+    color: #176b68;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.lugar p {
+    color: #666;
+}
+
+.curiosidade {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    background: #fff5e8;
+    padding: 30px;
+    border-left: 5px solid #e59b50;
+}
+
+.curiosidade h2 {
+    margin-bottom: 8px;
+    color: #805322;
+}
+
+footer {
+    background: #173f3e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+footer p + p {
+    color: #b9d0cd;
+    margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 16px 20px;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+    .banner {
+        min-height: 420px;
+        padding: 45px 25px;
+    }
+
+    .banner h2 {
+        font-size: 43px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-pagina {
+        padding: 50px 25px;
+    }
+
+    .titulo-pagina h2,
+    .conteudo > h2 {
+        font-size: 30px;
+    }
+
+    .lugar {
+        grid-template-columns: 1fr;
+    }
+
+    .lugar img {
+        height: 220px;
+    }
+}
